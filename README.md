@@ -1,6 +1,6 @@
 # Home Service Robot
 
-This project aims to perform mapping using RGB-D based RTAB-Map (Real-Time Appearance-Based Mapping) Algorithm.
+The objective is to navigate to a pick-up location to retrieve a virtual object, and then proceed to a designated drop-off zone to place it.
 
 ![Alt text](assets/robotworld.gif)
 :--:
