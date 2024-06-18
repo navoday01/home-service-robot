@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!-- Launch rviz with a saved config file -->
+<launch>
+    <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find robot_world)/rviz/amcl.rviz"/>
+</launch>
