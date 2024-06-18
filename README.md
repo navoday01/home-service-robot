@@ -89,10 +89,42 @@ To launch the project, clone the github repository under src folder is your ros 
 ```
 git clone https://github.com/navoday01/home-service-robot.git
 ```
-Build and source the workspace and then make shell scripts executable by 
+Build and source the workspace and then go to scripts directory
 ```
 cd src/home-service-robot/robot_world/scripts
-
+```
+make shell scripts executable by
+```
 sudo chmod +x *.sh
+```
+## SLAM
+
+To test the SLAM algorithm and create a new map of the environment, run:
+```
+./test_slam.sh
+```
+
+Run telop package to navigate through the environment by:
+```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+```
+
+Once the house is fully explored, save the map with:
+```
+rosrun map_server map_saver -f <desired directory to save map>/<map name>
+```
+## Navigation
+
+To test the navigation algorithm, run:
+```
+./test_navigation.sh
+```
+We will be using the already generated map and localize with AMCL. Press the `2D Nav Goal` button in Rviz and click somewhere on the map to command the robot to navigate there.
+
+## Home Service
+
+To simulate a full home service robot capable of navigating to pick up and deliver virtual objects, run:
+```
+./home_service.sh
 ```
 
